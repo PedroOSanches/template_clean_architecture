@@ -6,35 +6,59 @@ Template de projeto organizado por **módulos**, com cada módulo dividido em ca
 
 ```
 .
-├── docs/                      # Documentação do projeto
-├── iac/                       # Infraestrutura como código
-├── src/
-│   ├── app/                   # Composição raiz: cria a aplicação, registra rotas e middlewares
-│   ├── modules/
-│   │   └── example_module/
-│   │       ├── application/
-│   │       │   ├── controllers/
-│   │       │   ├── viewmodels/
-│   │       │   └── web/
-│   │       │       ├── middlewares/
-│   │       │       ├── routes/
-│   │       │       └── schemas/
-│   │       ├── domain/
-│   │       │   ├── entities/
-│   │       │   ├── errors/
-│   │       │   ├── gateways/
-│   │       │   ├── observability/
-│   │       │   └── repositories/
-│   │       └── infra/
-│   │           ├── dto/
-│   │           ├── external/
-│   │           │   └── gateways/
-│   │           └── repositories/
-│   └── shared/
-│       ├── errors/            # Erros base compartilhados entre módulos
-│       └── middlewares/       # Middlewares globais
-├── tests/                     # Testes (espelham a estrutura de src)
-└── tools/                     # Scripts e utilitários de desenvolvimento
+├───docs
+├───iac
+├───src
+│   ├───app
+│   ├───modules
+│   │   └───example_module
+│   │       ├───application
+│   │       │   ├───controllers
+│   │       │   ├───viewmodels
+│   │       │   └───web
+│   │       │       ├───middlewares
+│   │       │       ├───routes
+│   │       │       └───schemas
+│   │       ├───domain
+│   │       │   ├───entities
+│   │       │   ├───errors
+│   │       │   ├───gateways
+│   │       │   ├───observability
+│   │       │   └───repositories
+│   │       └───infra
+│   │           ├───dto
+│   │           ├───external
+│   │           │   └───gateways
+│   │           └───repositories
+│   └───shared
+│       ├───errors
+│       └───middlewares
+└───tests
+    ├───app
+    ├───modules
+    │   └───example_module
+    │       ├───application
+    │       │   ├───controllers
+    │       │   ├───viewmodels
+    │       │   └───web
+    │       │       ├───middlewares
+    │       │       ├───routes
+    │       │       └───schemas
+    │       ├───domain
+    │       │   ├───entities
+    │       │   ├───errors
+    │       │   ├───gateways
+    │       │   ├───observability
+    │       │   └───repositories
+    │       └───infra
+    │           ├───dto
+    │           ├───external
+    │           │   └───gateways
+    │           └───repositories
+    └───shared
+        ├───errors
+        ├───middlewares
+        └───utils
 ```
 
 ## Camadas de um módulo
@@ -177,6 +201,3 @@ tests/
 6. Declare as rotas em `application/web/routes` e exporte o roteador pelo `index`.
 7. Registre o roteador do módulo em `src/app`.
 8. Crie os testes correspondentes em `tests/modules/<nome_do_modulo>`.
-
-## Diagrama de Pacotes do Repositório
-![Diagrama de pacotes](package_diagram_clean_architecture.png)
