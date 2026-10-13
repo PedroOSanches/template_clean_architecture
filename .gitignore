@@ -1,0 +1,19 @@
+*.env
+
+
+*.log
+build/
+coverage/
+dist/
+
+
+
+# Configurações Locais
+.vscode/
+!.vscode/extensions.json
+.idea/
+.claude/settings.local.json
+
+
+*.tmp
+*.bak
