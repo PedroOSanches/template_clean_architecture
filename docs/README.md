@@ -201,3 +201,6 @@ tests/
 6. Declare as rotas em `application/web/routes` e exporte o roteador pelo `index`.
 7. Registre o roteador do módulo em `src/app`.
 8. Crie os testes correspondentes em `tests/modules/<nome_do_modulo>`.
+
+## Diagrama de Pacotes do Template
+!["Diagrama de Pacotes"](diagrama_pacotes.png)
